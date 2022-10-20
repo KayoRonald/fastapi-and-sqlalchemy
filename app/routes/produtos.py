@@ -33,3 +33,8 @@ async def listar_produto(db: Session = Depends(get_db)):
 async def criar_produto(produto: Produto, db: Session = Depends(get_db)):
   produto_criar = RepositorioProduto(db).criar(produto)
   return produto_criar
+  
+@router.delete('/produto/{id}', status_code=status.HTTP_200_OK)
+async def apagar_produto(id: str, db: Session = Depends(get_db)):
+  apagar = RepositorioProduto(db).remove_db(id)
+  return apagar

@@ -3,7 +3,6 @@ from app.models import models
 from app.schema import schemas
 
 class RepositorioProduto():
-
   def __init__(self, db: Session):
     self.db = db
   
@@ -16,3 +15,7 @@ class RepositorioProduto():
 
   def listar_produto(self):
     return self.db.query(models.Produtos).all()
+
+  def remove_db(self, id: str):
+    db_produto = self.db.delete(models.Produtos).where(id == models.Produtos.id)
+    return db_produto
