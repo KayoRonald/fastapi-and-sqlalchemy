@@ -1,0 +1,12 @@
+{
+  "python.autoComplete.extraPaths": [
+    "./path-to-your-code"
+  ],
+  "python.analysis.extraPaths": [
+    "./path-to-your-code"
+  ],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+    "reportMissingModuleSource": "none"
+  }
+}
