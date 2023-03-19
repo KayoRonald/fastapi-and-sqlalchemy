@@ -9,3 +9,11 @@ class Produto(BaseModel):
   valor: float
   class Config: # [missing-class-docstring]
     orm_mode = True
+  
+class UpdateProduto(BaseModel):
+  """Return the pathname of the KOS root directory."""
+  nome: Optional[str]
+  descricao: Optional[str]
+  valor: Optional[float]
+  class Config: # [missing-class-docstring]
+    orm_mode = True
